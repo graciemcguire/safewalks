@@ -10,7 +10,7 @@ import React from 'react';
 import {StatusBar, Text} from 'react-native';
 
 import HomeScreen from './src/screens/HomeScreen/index.js';
-
+import HomeMap from './src/components/HomeMap/index.js';
 
 const App: () => React$Node = () => {
 // const App = () => {
