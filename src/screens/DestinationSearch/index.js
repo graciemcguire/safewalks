@@ -7,6 +7,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 const DestinationSearch = () => {
   const [fromText, setFromText] = useState({initialState: ''});
   const [destinationText, setDestinationText] = useState({initialState: ''});
+  const API_KEY = `#{process.env.REACT_APP_GOOGLE_API_KEY}`
 
   return (
     <SafeAreaView>
@@ -32,7 +33,7 @@ const DestinationSearch = () => {
             console.log(data, details);
           }}
           query={{
-            key: 'AIzaSyCuB25qpctYqZhJaz2Hj27xXqVvUpeYhSM',
+            key: {API_KEY},
             language: 'en',
           }}
         />
