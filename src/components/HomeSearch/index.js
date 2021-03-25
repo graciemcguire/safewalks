@@ -5,9 +5,11 @@ import styles from './styles';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 AntDesign.loadFont();
 MaterialIcons.loadFont();
+Entypo.loadFont();
 
 const HomeSearch = () => {
   return (
@@ -21,8 +23,23 @@ const HomeSearch = () => {
           <Text>Now</Text>
           <MaterialIcons name={'keyboard-arrow-down'} size={16} />
         </View>
-        {/* { previous destination} */}
-        {/* { home} */}
+      </View>
+
+      {/* { previous destination} */}
+
+      <View styles={styles.row}>
+        <View style={styles.iconContainer}>
+          <AntDesign name={'clockcircle'} size={20} color='#fff'/>
+        </View>
+        <Text style={styles.destinationText}>The Rosemont</Text>
+      </View>
+
+      {/* { home} */}
+      <View styles={styles.row}>
+        <View style={[styles.iconContainer, {backgroundColor: '#218cff'}]}>
+          <Entypo name={'home'} size={20} color='#fff'/>
+        </View>
+        <Text style={styles.destinationText}>Home</Text>
       </View>
     </View>
   );
