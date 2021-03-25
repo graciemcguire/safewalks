@@ -27,7 +27,7 @@ const HomeSearch = () => {
 
       {/* { previous destination} */}
 
-      <View styles={styles.row}>
+      <View style={styles.row}>
         <View style={styles.iconContainer}>
           <AntDesign name={'clockcircle'} size={20} color='#fff'/>
         </View>
@@ -35,7 +35,8 @@ const HomeSearch = () => {
       </View>
 
       {/* { home} */}
-      <View styles={styles.row}>
+      
+      <View style={styles.row}>
         <View style={[styles.iconContainer, {backgroundColor: '#218cff'}]}>
           <Entypo name={'home'} size={20} color='#fff'/>
         </View>

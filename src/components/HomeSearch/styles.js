@@ -24,9 +24,9 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 20,
+    padding: 10,
     borderBottomWidth: 1,
     borderColor: '#dbdbdb',
   },
