@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react';
-import {View, SafeAreaView} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, SafeAreaView } from 'react-native';
 import styles from './styles.js';
 
-import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 const DestinationSearch = () => {
   const API_KEY = `${process.env.REACT_APP_GOOGLE_API_KEY}`;
 
 
-  const [originPlace, setOriginPlace] = useState({initialState: null});
+  const [originPlace, setOriginPlace] = useState({ initialState: null });
   const [destinationPlace, setDestinationPlace] = useState({
     initialState: null,
   });
@@ -28,7 +28,7 @@ const DestinationSearch = () => {
             textInput: styles.textInput,
           }}
           onPress={(data, details = null) => {
-            setOriginPlace({value: {data, details}});
+            setOriginPlace({ value: { data, details } });
           }}
           query={{
             key: API_KEY,
@@ -42,7 +42,7 @@ const DestinationSearch = () => {
             textInput: styles.textInput,
           }}
           onPress={(data, details = null) => {
-            setDestinationPlace({value: {data, details}});
+            setDestinationPlace({ value: { data, details } });
           }}
           query={{
             key: API_KEY,
