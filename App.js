@@ -9,8 +9,10 @@
 import React from 'react';
 import {StatusBar, Text} from 'react-native';
 
-import HomeScreen from './src/screens/HomeScreen/index.js';
-import DestinationSearch from './src/screens/DestinationSearch/index.js';
+// import HomeScreen from './src/screens/HomeScreen/index.js';
+// import DestinationSearch from './src/screens/DestinationSearch/index.js';
+import SearchResults from './src/screens/SearchResults/index.js';
+
 
 
 const App: () => React$Node = () => {
@@ -18,7 +20,8 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="" />
       {/* <HomeScreen /> */}
-      <DestinationSearch />
+      {/* <DestinationSearch /> */}
+      <SearchResults />
     </>
   );
 };

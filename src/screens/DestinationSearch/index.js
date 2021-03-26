@@ -7,7 +7,6 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 const DestinationSearch = () => {
   const API_KEY = `${process.env.REACT_APP_GOOGLE_API_KEY}`;
 
-
   const [originPlace, setOriginPlace] = useState({ initialState: null });
   const [destinationPlace, setDestinationPlace] = useState({
     initialState: null,
