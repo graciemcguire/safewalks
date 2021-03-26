@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     height: '100%',
-    // backgroundColor: '#eee',
+    backgroundColor: '#eee',
   },
   textInput: {
     backgroundColor: '#e7e7e7',
