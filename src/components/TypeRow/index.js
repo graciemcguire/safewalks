@@ -6,16 +6,15 @@ Ionicons.loadFont();
 
 function TypeRow() {
   return (
-    <View>
-      <Text>type row</Text>
+    <View style={styles.container}>
       <Image
         style={styles.image}
-        // source={require('../../assets/images/UberX.jpeg')}
+        source={require('../../assets/images/UberX.jpeg')}
       />
       <View style={styles.middleContainer}>
         <Text style={styles.type}>
-          UberX
-          <Ionicons name={'person'} size={25} />
+          UberX{'  '}
+          <Ionicons name={'person'} size={16} />
           3
         </Text>
         <Text style={styles.time}>3:11PM Drop Off</Text>

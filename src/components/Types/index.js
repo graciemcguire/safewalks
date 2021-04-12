@@ -2,12 +2,14 @@ import React from 'react';
 import {View, Text} from 'react-native';
 
 import styles from './styles';
-import TypeRow from '../TypeRow'
+import TypeRow from '../TypeRow';
 
 export default function Types() {
   return (
     <View>
-      <Text>hi</Text>
+      {/* <Text>hi</Text> */}
+      <TypeRow />
+      <TypeRow />
       <TypeRow />
     </View>
   );
