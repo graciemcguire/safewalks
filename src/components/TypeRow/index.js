@@ -4,25 +4,33 @@ import styles from './styles.js';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 Ionicons.loadFont();
 
-function TypeRow() {
+function TypeRow({type}) {
+  console.log(type);
+  const getImageNames = () => {
+    if (type.type === 'UberX') {
+      return require(`../../assets/images/UberX.jpeg`);
+    }
+    if (type.type === 'Comfort') {
+      return require(`../../assets/images/Comfort.jpeg`);
+    } else {
+      return require(`../../assets/images/UberXL.jpeg`);
+    }
+  };
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={require('../../assets/images/UberX.jpeg')}
-      />
+      <Image style={styles.image} source={getImageNames()} />
       <View style={styles.middleContainer}>
         <Text style={styles.type}>
-          UberX{'  '}
-          <Ionicons name={'person'} size={16} />
-          3
+          {type.type}
+          {'  '}
+          <Ionicons name={'person'} size={16} />3
         </Text>
         <Text style={styles.time}>3:11PM Drop Off</Text>
       </View>
 
       <View style={styles.rightContainer}>
         <Ionicons name={'pricetag'} size={18} color={'#42d742'} />
-        <Text style={styles.price}>est. $69</Text>
+        <Text style={styles.price}>est. ${type.price}</Text>
       </View>
     </View>
   );
