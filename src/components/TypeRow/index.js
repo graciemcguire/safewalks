@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
 import styles from './styles.js';
-import fonts from '../../assets/fonts/index.js'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 Ionicons.loadFont();
 
