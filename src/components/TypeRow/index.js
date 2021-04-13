@@ -5,7 +5,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 Ionicons.loadFont();
 
 function TypeRow({type}) {
-  console.log(type);
   const getImageNames = () => {
     if (type.type === 'UberX') {
       return require(`../../assets/images/UberX.jpeg`);
@@ -16,6 +15,7 @@ function TypeRow({type}) {
       return require(`../../assets/images/UberXL.jpeg`);
     }
   };
+
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={getImageNames()} />
