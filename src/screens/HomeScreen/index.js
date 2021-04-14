@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Dimensions} from 'react-native';
 
 import HomeMap from '../../components/HomeMap/index.js';
 import CovidMessage from '../../components/CovidMessage/index.js';
@@ -8,9 +8,16 @@ import HomeSearch from '../../components/HomeSearch/index.js';
 const HomeScreen = props => {
   return (
     <View>
-      <HomeMap />
+
+      <View style={{ height: Dimensions.get('window').height - 408 }}>
+       <HomeMap />
+      </View>
+
       <CovidMessage />
+
       <HomeSearch />
+    
+
     </View>
   );
 };

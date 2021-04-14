@@ -4,12 +4,10 @@ const styles = StyleSheet.create({
   map: {
     ...StyleSheet.absoluteFillObject,
   },
-  container: {
-    ...StyleSheet.absoluteFillObject,
-    height: 400,
-    width: 400,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+  marker: {
+    width: 70,
+    height: 70,
+    resizeMode: 'contain',
   },
 });
 

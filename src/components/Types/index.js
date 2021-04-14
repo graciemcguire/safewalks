@@ -15,16 +15,8 @@ export default function Types() {
       {typesData.map(type => (
         <TypeRow key={type.id} type={type} />
       ))}
-      <Pressable
-        onPress={confirm}
-        style={{
-          width: '100%',
-          padding: 10,
-          margin: 10,
-          backgroundColor: 'black',
-          alignItems: 'center',
-        }}>
-        <Text style={{color: 'white', fontWeight: 'bold'}}>Confirm Ride</Text>
+      <Pressable onPress={confirm} style={styles.button}>
+        <Text style={styles.text}>Confirm Ride</Text>
       </Pressable>
     </View>
   );
