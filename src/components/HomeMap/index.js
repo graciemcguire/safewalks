@@ -1,6 +1,9 @@
+/* eslint-disable react-native/no-inline-styles */
+
 import React from 'react';
-import MapView from 'react-native-maps';
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import {View, Text} from 'react-native';
+import styles from './styles';
 
 const HomeMap = () => {
   return (
@@ -12,6 +15,8 @@ const HomeMap = () => {
         alignItems: 'center',
       }}>
       <MapView
+        provider={PROVIDER_GOOGLE}
+        style={styles.map}
         initialRegion={{
           latitude: 37.78825,
           longitude: -122.4324,
