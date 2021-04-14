@@ -9,7 +9,7 @@
 import React from 'react';
 import {StatusBar, Text} from 'react-native';
 
-// import HomeScreen from './src/screens/HomeScreen/index.js';
+import HomeScreen from './src/screens/HomeScreen/index.js';
 import DestinationSearch from './src/screens/DestinationSearch/index.js';
 import SearchResults from './src/screens/SearchResults/index.js';
 
