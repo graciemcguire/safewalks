@@ -7,27 +7,27 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 const DestinationSearch = () => {
   const API_KEY = `${process.env.REACT_APP_GOOGLE_API_KEY}`;
 
-  const [originPlace, setOriginPlace] = useState({ initialState: null });
-  const [destinationPlace, setDestinationPlace] = useState({
+  const [ originPlace, setOriginPlace ] = useState( { initialState: null } );
+  const [ destinationPlace, setDestinationPlace ] = useState({
     initialState: null,
   });
 
   useEffect(() => {
-    if (originPlace && destinationPlace) {
+    if ( originPlace && destinationPlace ) {
       console.warn('redirect to results page');
     }
-  }, [originPlace, destinationPlace]);
+  }, [ originPlace, destinationPlace ] );
   //
   return (
     <SafeAreaView>
-      <View style={styles.container}>
+      <View style={ styles.container }>
         <GooglePlacesAutocomplete
           placeholder="From?"
           styles={{
             textInput: styles.textInput,
           }}
-          onPress={(data, details = null) => {
-            setOriginPlace({ value: { data, details } });
+          onPress={ ( data, details = null ) => {
+            setOriginPlace( { value: { data, details } } );
           }}
           query={{
             key: API_KEY,
@@ -40,8 +40,8 @@ const DestinationSearch = () => {
           styles={{
             textInput: styles.textInput,
           }}
-          onPress={(data, details = null) => {
-            setDestinationPlace({ value: { data, details } });
+          onPress={ ( data, details = null ) => {
+            setDestinationPlace( { value: { data, details } } );
           }}
           query={{
             key: API_KEY,

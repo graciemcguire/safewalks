@@ -1,13 +1,10 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 20,
-    // height: 40,
-    // width: 50,
-    // resizeMode: 'contain',
   },
   middleContainer: {
     flex: 1,

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Dimensions} from 'react-native';
+import { View, Dimensions } from 'react-native';
 
 import HomeMap from '../../components/HomeMap/index.js';
 import CovidMessage from '../../components/CovidMessage/index.js';
