@@ -10,13 +10,12 @@ const HomeScreen = props => {
     <View>
 
       <View style={{ height: Dimensions.get('window').height - 408 }}>
-       <HomeMap />
+        <HomeMap />
       </View>
 
       <CovidMessage />
 
       <HomeSearch />
-    
 
     </View>
   );

@@ -6,13 +6,13 @@ import cars from '../../assets/data/cars';
 
 const HomeMap = () => {
   const getImageNames = type => {
-    if (type === 'UberX') {
+    if ( type === 'UberX' ) {
       return require('../../assets/images/top-UberX.png');
     }
-    if (type === 'Comfort') {
-      return require('../../assets/images/top-Comfort.png');
+    if ( type === 'Comfort' ) {
+      return require( '../../assets/images/top-Comfort.png' );
     } else {
-      return require('../../assets/images/top-UberXL.png');
+      return require( '../../assets/images/top-UberXL.png' );
     }
   };
 
@@ -26,17 +26,20 @@ const HomeMap = () => {
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       }}>
-      <FlatList
-        data={ cars }
-        renderItem={({ item }) => (
-          <Marker
-            coordinate={{ latitude: item.latitude, longitude: item.longitude }}>
-            <Image source={ getImageNames(item.type) } style={ styles.marker } />
-          </Marker>
-        )}
-      />
+        <FlatList
+          data={cars}
+          renderItem={({ item }) => (
+            <Marker coordinate={{ latitude: item.latitude, longitude: item.longitude }}>
+              {/* // <Marker coordinate={{ latitude: 37.78825, longitude: -122.4324 }}>  */}
+
+              <Image source={ getImageNames(item.type) } style={ styles.marker } />
+              {/* <Image source={require('../../assets/images/top-UberXL.png')} style={styles.marker} /> */}
+            </Marker>
+          )}
+        />
     </MapView>
   );
 };
 
 export default HomeMap;
+
