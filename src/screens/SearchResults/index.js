@@ -2,15 +2,15 @@
 import React from 'react';
 import { View, Dimensions } from 'react-native';
 
-import HomeMap from '../../components/HomeMap'
-import styles from '../../components/HomeMap/styles';
+import RouteMap from '../../components/RouteMap'
+import styles from './styles';
 import Types from '../../components/Types'
 
 const SearchResults = () => {
   return (
     <View style={ styles.mainView }>
       <View style={{ height: Dimensions.get('window').height - 400 }}>
-        <HomeMap />
+        <RouteMap />
       </View>
       <View style={{ height: 400 }}>
         <Types />

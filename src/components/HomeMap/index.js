@@ -17,7 +17,19 @@ const HomeMap = () => {
     }
   };
 
-  console.log('cars ---> ', cars);
+  const renderCars = car => {
+    return cars.map((car) => (
+      <Marker 
+        key={ car.id }
+        coordinate={{ latitude: car.latitude, longitude: car.longitude }}
+      >
+        <Image 
+          source={ getImageNames(car.type) } 
+          style={ styles.marker } 
+        />
+      </Marker>
+    ))
+  }
 
   return (
     <MapView
@@ -26,23 +38,12 @@ const HomeMap = () => {
       initialRegion={{
         latitude: 28.450627,
         longitude: -16.263045,
-        latitudeDelta: 0.0021,
-        longitudeDelta: 0.0011,
+        latitudeDelta: 0.0121,
+        longitudeDelta: 0.0211,
       }}>
-        {cars.map(( car ) => (
-            <Marker 
-              key={ car.id }
-              coordinate={{ latitude: car.latitude, longitude: car.longitude }}
-            >
-              <Image 
-                source={ getImageNames(car.type) } 
-                style={ styles.marker } 
-              />
-            </Marker>
-        ))}
+        { renderCars() }
     </MapView>
   );
 };
 
 export default HomeMap;
-
