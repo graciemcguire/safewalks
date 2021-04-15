@@ -5,6 +5,7 @@ import styles from './styles';
 import cars from '../../assets/data/cars';
 
 const HomeMap = () => {
+
   const getImageNames = type => {
     if ( type === 'UberX' ) {
       return require('../../assets/images/top-UberX.png');
@@ -16,27 +17,29 @@ const HomeMap = () => {
     }
   };
 
+  console.log('cars ---> ', cars);
+
   return (
     <MapView
       provider={ PROVIDER_GOOGLE }
       style={ styles.map }
       initialRegion={{
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
+        latitude: 28.450627,
+        longitude: -16.263045,
+        latitudeDelta: 0.0021,
+        longitudeDelta: 0.0011,
       }}>
-        <FlatList
-          data={cars}
-          renderItem={({ item }) => (
-            <Marker coordinate={{ latitude: item.latitude, longitude: item.longitude }}>
-              {/* // <Marker coordinate={{ latitude: 37.78825, longitude: -122.4324 }}>  */}
-
-              <Image source={ getImageNames(item.type) } style={ styles.marker } />
-              {/* <Image source={require('../../assets/images/top-UberXL.png')} style={styles.marker} /> */}
+        {cars.map(( car ) => (
+            <Marker 
+              key={ car.id }
+              coordinate={{ latitude: car.latitude, longitude: car.longitude }}
+            >
+              <Image 
+                source={ getImageNames(car.type) } 
+                style={ styles.marker } 
+              />
             </Marker>
-          )}
-        />
+        ))}
     </MapView>
   );
 };
