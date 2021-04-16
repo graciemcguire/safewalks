@@ -18,8 +18,8 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="" />
       <HomeScreen />
-      {/* <DestinationSearch /> */}
-      {/* <SearchResults /> */}
+      <DestinationSearch />
+      <SearchResults />
     </>
   );
 };
