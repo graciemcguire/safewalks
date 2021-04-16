@@ -25,7 +25,12 @@ const HomeMap = () => {
       >
         <Image 
           source={ getImageNames(car.type) } 
-          style={ styles.marker } 
+          style={{
+            ...styles.marker,
+            transform: [{
+              rotate: `${ car.heading }deg`
+            }]
+          }}
         />
       </Marker>
     ))

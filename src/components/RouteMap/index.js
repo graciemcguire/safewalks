@@ -15,7 +15,7 @@ const RouteMap = () => {
     longitude: -16.275000
   }
 
-  const GOOGLE_MAPS_APIKEY = '' 
+  const GOOGLE_MAPS_API_KEY = '' 
 
   return (
     <MapView
@@ -28,19 +28,19 @@ const RouteMap = () => {
         longitudeDelta: 0.0211,
       }}>
       <MapViewDirections
-        origin={origin}
-        destination={destination}
-        apikey={GOOGLE_MAPS_APIKEY}
-        strokeWidth={5}
+        origin={ origin }
+        destination={ destination }
+        apikey={ GOOGLE_MAPS_API_KEY }
+        strokeWidth={ 5}
         strokeColor="hotpink"
       />
       <Marker
-        title={'origin'}
+        title={ 'origin' }
         coordinate={ origin }
         pinColor='black'
       />
       <Marker
-        title={'destination'}
+        title={ 'destination' }
         coordinate={ destination }
         pinColor='black'
       />
