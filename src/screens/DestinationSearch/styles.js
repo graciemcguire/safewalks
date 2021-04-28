@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#e7e7e7',
     marginVertical: 5,
     padding: 10,
+    marginLeft: 20,
   },
   seperator: {
     backgroundColor: '#efefef',
@@ -31,12 +32,38 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     marginRight: 15,
   },
+  listView: {
+    position: 'absolute',
+    top: 105,
+  },
   locationText: {
 
   },
-  listView: {
-     position: 'absolute',
-     top: 105,
+  square: {
+    width: 5,
+    height: 5,
+    backgroundColor: 'black',
+    position: 'absolute',
+    top: 80,
+    left: 15,
+  },
+  circle: {
+    width: 5,
+    height: 5,
+    backgroundColor: 'black',
+    position: 'absolute',
+    top: 20,
+    left: 15,
+    borderRadius: 5,
+  },
+  line: {
+    width: 1,
+    height: 50,
+    backgroundColor: '#919191',
+    position: 'absolute',
+    top: 28,
+    left: 17,
+    
   },
 });
 
