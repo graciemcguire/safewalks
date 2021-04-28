@@ -11,6 +11,33 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     padding: 10,
   },
+  seperator: {
+    backgroundColor: '#efefef',
+    height: 1
+  },
+  autoCompleteContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 10,
+    right: 10
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  iconContainer: {
+    backgroundColor: '#a2a2a2',
+    padding: 5,
+    borderRadius: 50,
+    marginRight: 15,
+  },
+  locationText: {
+
+  },
+  listView: {
+     position: 'absolute',
+     top: 105,
+  },
 });
 
 export default styles;
