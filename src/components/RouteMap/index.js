@@ -11,11 +11,10 @@ const RouteMap = () => {
   }
   
   const destination = { 
-    latitude: 28.450627,
+    latitude: 28.451567,
     longitude: -16.275000
-  }
+ } 
 
-  const GOOGLE_MAPS_API_KEY = '' 
 
   return (
     <MapView
